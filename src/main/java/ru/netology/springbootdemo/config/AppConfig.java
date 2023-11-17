@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import ru.netology.springbootdemo.DevProfile;
 import ru.netology.springbootdemo.ProductionProfile;
 import ru.netology.springbootdemo.SystemProfile;
+import ru.netology.springbootdemo.controller.ProfileController;
 
 @Configuration
 public class AppConfig {
@@ -20,4 +21,5 @@ public class AppConfig {
     public SystemProfile prodProfile() {
         return new ProductionProfile();
     }
+
 }

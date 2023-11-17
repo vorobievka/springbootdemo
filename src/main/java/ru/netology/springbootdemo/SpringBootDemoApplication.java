@@ -2,15 +2,16 @@ package ru.netology.springbootdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import ru.netology.springbootdemo.controller.ProfileController;
 
 @SpringBootApplication
 public class SpringBootDemoApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(SpringBootDemoApplication.class, args);
-
-		//Не понятно как связать контроллер и конфиг.
+		var context = SpringApplication.run(SpringBootDemoApplication.class, args);
+		ProfileController profileController = (ProfileController) context.getBean("profileController");
+		System.out.println(profileController.getProfile());
 
 	}
 
